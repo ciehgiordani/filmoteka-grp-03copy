@@ -56,8 +56,11 @@ export default function Controller({
     };
     return this;
   }
+  // xxx: for now i will just save one spline function to to
   function getInterpolateFunction(c) {
-    swiper.controller.spline = swiper.params.loop ? new LinearSpline(swiper.slidesGrid, c.slidesGrid) : new LinearSpline(swiper.snapGrid, c.snapGrid);
+    if (!swiper.controller.spline) {
+      swiper.controller.spline = swiper.params.loop ? new LinearSpline(swiper.slidesGrid, c.slidesGrid) : new LinearSpline(swiper.snapGrid, c.snapGrid);
+    }
   }
   function setTranslate(_t, byController) {
     const controlled = swiper.controller.control;
@@ -80,9 +83,6 @@ export default function Controller({
       }
       if (!controlledTranslate || swiper.params.controller.by === 'container') {
         multiplier = (c.maxTranslate() - c.minTranslate()) / (swiper.maxTranslate() - swiper.minTranslate());
-        if (Number.isNaN(multiplier) || !Number.isFinite(multiplier)) {
-          multiplier = 1;
-        }
         controlledTranslate = (translate - swiper.minTranslate()) * multiplier + c.minTranslate();
       }
       if (swiper.params.controller.inverse) {
@@ -169,11 +169,11 @@ export default function Controller({
     removeSpline();
   });
   on('setTranslate', (_s, translate, byController) => {
-    if (!swiper.controller.control || swiper.controller.control.destroyed) return;
+    if (!swiper.controller.control) return;
     swiper.controller.setTranslate(translate, byController);
   });
   on('setTransition', (_s, duration, byController) => {
-    if (!swiper.controller.control || swiper.controller.control.destroyed) return;
+    if (!swiper.controller.control) return;
     swiper.controller.setTransition(duration, byController);
   });
   Object.assign(swiper.controller, {

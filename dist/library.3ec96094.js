@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"2EOek":[function(require,module,exports) {
+})({"bflWm":[function(require,module,exports) {
 "use strict";
 var global = arguments[3];
 var HMR_HOST = null;
@@ -536,7 +536,7 @@ parcelHelpers.export(exports, "API_KEY", ()=>API_KEY);
 let page;
 let query;
 const BASE_URL = "https://api.themoviedb.org/3";
-const API_KEY = "db5c04dbd9637821020050cea594d5e0";
+const API_KEY = "9ce408291b177c2a2e598968d33c0b4a";
 // const WATCH_KEY = 'watched';
 // const QUEUE_KEY = 'queue';
 async function fetchPopularMovies(page1) {
@@ -627,7 +627,7 @@ watchedBtns.forEach(function(watchedBtn) {
 });
 
 },{}],"3wsn7":[function(require,module,exports) {
-//-----------------------------HORYZONTAL-INDICATOR-----------------------------//
+//-----------------------------HORiZONTAL-INDICATOR-----------------------------//
 window.onscroll = function() {
     myFunction();
 };
@@ -637,7 +637,7 @@ function myFunction() {
     var scrolled = winScroll / height * 100;
     document.getElementById("myBar").style.width = scrolled + "%";
 }
-//-----------------------------HORYZONTAL-INDICATOR-----------------------------//
+//-----------------------------HORiZONTAL-INDICATOR-----------------------------//
 //--------------------------------CUSTOM-ANCHOR---------------------------------//
 //Make sure the user has scrolled at least double the height of the browser
 var toggleHeight = $(window).outerHeight() * 1.2;
@@ -854,7 +854,7 @@ var _state = require("./state");
 const updateLibRender = async (data)=>{
     try {
         let markup = "";
-        const warning = `<li class="watched-img"><p class="watched-warning">No movies have been added yet. Let's go pick something to your liking</p></li>`;
+        const warning = `<li class="watched-img"><p class="watched-warning">No movies added. Choose something that you like</p></li>`;
         (0, _pagination.resetCurrentPage)();
         const films = localPaginate(data, (0, _state.state).currentPage);
         if (data === undefined || data.length === 0) {
@@ -1387,6 +1387,6 @@ function chahgeBtnActiveStatus(elFirst, elSecond) {
     elSecond.classList.remove("active");
 }
 
-},{"./local-storage":"4Qyzi","./pagination":"9j1Dd","./refs":"2WoF2","./render-from-storage":"gir1X","./state":"2FZFo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["2EOek","hjkgY"], "hjkgY", "parcelRequired7c6")
+},{"./local-storage":"4Qyzi","./pagination":"9j1Dd","./refs":"2WoF2","./render-from-storage":"gir1X","./state":"2FZFo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["bflWm","hjkgY"], "hjkgY", "parcelRequired7c6")
 
 //# sourceMappingURL=library.3ec96094.js.map

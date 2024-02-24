@@ -18,7 +18,7 @@ resetCurrentPage();
 searchFormEl.addEventListener('submit', e => {
   e.preventDefault();
   if (!inputEl.value.trim()) {
-    return Notiflix.Notify.failure('Please enter a search query for the movie');
+    return Notiflix.Notify.failure('No movie title have been placed in Search box!');
   }
   state.whatPaginated = 'search';
   resetCurrentPage();
@@ -34,7 +34,7 @@ searchFormEl.addEventListener('submit', e => {
         renderPaginationMarkup();
 
         Notiflix.Notify.success(
-          'Hooray! We found something interesting for you :)'
+          'Group three have found movie lists for you! :)'
         );
         inputEl.value = '';
         removeNotifMeme();

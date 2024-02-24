@@ -2,7 +2,7 @@ export let page;
 export let query;
 
 const BASE_URL = 'https://api.themoviedb.org/3';
-const API_KEY = 'db5c04dbd9637821020050cea594d5e0';
+const API_KEY = '9ce408291b177c2a2e598968d33c0b4a';
 // const WATCH_KEY = 'watched';
 // const QUEUE_KEY = 'queue';
 

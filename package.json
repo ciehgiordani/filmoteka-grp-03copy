@@ -2,10 +2,10 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://ciehgiordani.github.io/goit-javascript-project-filmoteka-grp3",
+  "homepage": "https://ciehgiordani.github.io/filmoteka-grp-03copy",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-javascript-project-filmoteka-grp3/"
+    "build": "parcel build src/*.html --public-url /filmoteka-grp-03copy/"
   },
   "repository": {
     "type": "git",

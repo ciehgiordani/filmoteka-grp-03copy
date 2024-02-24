@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmoteka</title>
+    <link rel="icon" href="/favicon.30f7f635.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/index.b07a87f3.css">
+    <link rel="stylesheet" href="../node_modules/basiclightbox/dist/basicLightbox.min.css">
+    <link rel="stylesheet" href="/index.6c56cf43.css">
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+  <div class="container container--header">
+    <div class="header_wraper">
+      <div class="logo-container">
+        <a href="/index.html" class="logo-film animate__animated animate__rubberBand">
+          <svg class="logo animate__animated animate__flip animate__slower animate__infinite" width="24" height="24">
+            <use class="logo-icon" href="/film-defs.83b16d88.svg#icon-film"></use>
+          </svg>
+          <span class="logo__name">Filmoteka</span>
+        </a>
+      </div>
+
+      <nav class="header-navigation">
+        <ul class="navigation-list">
+          <li class="navigation-list__item">
+            <a class="navigation-list__link site-nav__link--current" href="/index.html">Home</a>
+          </li>
+          <li class="navigation-list__item">
+            <a class="navigation-list__link" href="/library.html">My Library</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <form class="header-search-form">
+      <div class="search-form">
+        <input type="text" name="search" class="search form-input" placeholder="Movie search">
+        <button type="submit" class="search-btn">
+          <span class="search-icon"></span>
+        </button>
+      </div>
+    </form>
+  </div>
+</header>
+
+
+    <main class="main">
+      <!-- Custom components  -->
+      <div class="mask">
+  <div class="loader"></div>
+</div>
+      <!-- anchor -->
+
+<div class="header-indicator">
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
+</div>
+
+<div class="up-button">
+  <a id="up-button" class="up-button__link" href="#home">
+    <svg class="animate__animated animate__infinite animate__pulse animate__slower up-button__icon" width="30" height="30">
+      <use href="/circle-up.f34d9cb7.svg#icon-circle-up"></use>
+    </svg>
+  </a>
+</div>
+
+
+
+
+
+
+      <!-- Gallery  -->
+      <section class="gallery">
+  <div class="container">
+    <h2 class="swiper-title animate__animated animate__infinite animate__pulse">Watch Movies Online!</h2>
+    <div class="swiper">
+      <ul class="swiper-wrapper"></ul>
+      <div class="swiper-button-prev">
+        <svg class="swiper-button-prev-icon">
+          <use href="/sprite.f14d31f7.svg#icon-circle-left"></use>
+        </svg>
+      </div>
+      <div class="swiper-button-next">
+        <svg class="swiper-button-next-icon">
+          <use href="/sprite.f14d31f7.svg#icon-circle-right"></use>
+        </svg>
+      </div>
+    </div>
+    <div>
+      <img class="meme-notif-nothing animate__animated" src="/nothing.b5babd03.jpg" alt="nothing">
+    </div>
+    <ul class="movies"></ul>
+    <div class="pagination"></div>
+  </div>
+</section>
+
+
+      <!-- Modal form  -->
+      <div id="info-modal" class="modal-wrapper">
+  <div id="modal">
+    <div id="close-modal" class="backdrop"></div>
+    <div id="movie-card">
+      <div id="content">
+        <div id="left-content" class="img-posters">
+          <div id="film-img" alt="Film Image">
+            <button class="trailer-btn" id="film-id" type="button">
+              <svg class="trailer-icon">
+                <use class="trailer-icon" href="/icons.adfc4680.svg#trailer-btn"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div id="right-content">
+          <h2 id="film-title"></h2>
+          <div id="description">
+            <div class="left-descr-content">
+              Votes
+              <div id="votes"></div>
+            </div>
+            <div class="left-descr-content">
+              Popularity
+              <div id="popul"></div>
+            </div>
+            <div class="left-descr-content">
+              Original title
+              <div id="origTitle"></div>
+            </div>
+            <div class="left-descr-content">
+              Genre
+              <div id="genre"></div>
+            </div>
+          </div>
+          <div class="about-wrapper">
+            <span>About</span>
+            <div id="about"></div>
+          </div>
+
+          <div class="btn_wrapper" id="buttonWrapper">
+            <button type="button" class="add-to-watched-btn music__btn" id="btn" data-value="add">
+              <audio id="1" src="/b.9990ae09.mp3"></audio>
+              ADD TO WATCHED
+            </button>
+
+            <button type="button" class="add-to-queue-btn music__btn" id="btn" data-value="add">
+              <audio id="1" src="/b.9990ae09.mp3">ADD TO QUEUE</audio>
+
+              ADD TO QUEUE
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="footer__container">
+        <p class="footer__text">&#169; 2024 | All Rights Reserved |</p>
+        <div class="footer__sub">Developed
+            <img class="footer__icon animate__animated animate__infinite animate__heartBeat animate__slower" src="/footer_icon.2e54ba9a.png" alt="footer_icon" width="14" height="14">
+           <p class="footer__link open-modal-team"> by GoIT Team3 Students</p>
+        </div>
+    </div>
+    </footer>
+    <div class="backdrop-modal team__backdrop--hidden">
+  <div class="team__modal">
+       <button class="team__modal--close close-modal-team">
+         <svg class="team__icon team__icon--close" width="25" height="25">
+           <use href="/icons.adfc4680.svg#icon-close"></use>
+         </svg>
+       </button>
+       <h1 class="team__title">Team G3</h1>
+       <div class="team__box">
+
+             <div class="team__member">
+             <div class="team__card">
+              <img class="team__photo" src="/Perci.bd05ba6b.png" alt="Perci">
+             </div>
+            <a class="team__link" href="https://github.com/perci-aceron" target="_blank">
+            <svg class="team__github" width="25" height="25">
+             <use href="/icons.adfc4680.svg#icon-github"></use>
+            </svg>
+            </a>
+            <p class="team__name">Perci Aceron</p>
+            <p class="team__role">Team Lead - pagination</p>
+          </div>
+          <div class="team__member">
+             <div class="team__card">
+              <img class="team__photo" src="/Kate.d14df62a.png" alt="Kate">
+             </div>
+            <a class="team__link" href="https://github.com/katelim215" target="_blank">
+            <svg class="team__github" width="25" height="25">
+             <use href="/icons.adfc4680.svg#icon-github"></use>
+            </svg>
+            </a>
+            <p class="team__name">Kate Limosnero</p>
+            <p class="team__role">Scrum Master - header</p>
+          </div>
+          <div class="team__member">
+             <div class="team__card">
+              <img class="team__photo" src="/Rey.345ef0d0.png" alt="Rey">
+             </div>
+            <a class="team__link" href="https://github.com/reyleal27" target="_blank">
+            <svg class="team__github" width="25" height="25">
+             <use href="/icons.adfc4680.svg#icon-github"></use>
+            </svg>
+            </a>
+            <p class="team__name">Rey Leal</p>
+            <p class="team__role">Developer- header, library</p>
+          </div>
+          <div class="team__member">
+             <div class="team__card">
+              <img class="team__photo" src="/Franci.164ccf3a.jpg" alt="Franci">
+             </div>
+            <a class="team__link" href="https://github.com/ciehgiordani" target="_blank">
+            <svg class="team__github" width="25" height="25">
+             <use href="/icons.adfc4680.svg#icon-github"></use>
+            </svg>
+            </a>
+            <p class="team__name">Franci Giordani</p>
+            <p class="team__role">Developer - movie cards, modals</p>
+          </div>
+          <div class="team__member">
+             <div class="team__card">
+              <img class="team__photo" src="/Mon.c3d7f5ac.png" alt="Mon">
+             </div>
+            <a class="team__link" href="https://github.com/kiksmon21" target="_blank">
+            <svg class="team__github" width="25" height="25">
+             <use href="/icons.adfc4680.svg#icon-github"></use>
+            </svg>
+            </a>
+            <p class="team__name">Mon Laguatan</p>
+            <p class="team__role">Developer - UI/UX</p>
+          </div>
+          <div class="team__member">
+             <div class="team__card">
+              <img class="team__photo" src="/Bri.bb5d42c9.png" alt="Bri">
+             </div>
+            <a class="team__link" href="https://github.com/Bmorta" target="_blank">
+            <svg class="team__github" width="25" height="25">
+             <use href="/icons.adfc4680.svg#icon-github"></use>
+            </svg>
+            </a>
+            <p class="team__name">Bri Lang</p>
+            <p class="team__role">Developer - Loader, functionality</p>
+          </div>
+         </div>
+       </div>
+
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+    <script src="/index.975ef6c8.js" defer=""></script>
+  </body>
+</html>
